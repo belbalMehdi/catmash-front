@@ -27,4 +27,8 @@ export class CatService {
     return this.http.patch<Cat>(rateUrl, cat);
   }
 
+  getCatRanking(): Observable<Cat[]> {
+    return this.http.get<Cat[]>(rankingUrl);
+  }
+
 }

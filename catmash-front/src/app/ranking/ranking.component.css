@@ -1,0 +1,7 @@
+.ranking-container{
+    margin-bottom : 100px;
+}
+
+.cat-name, .cat-votes{
+    font-weight: bolder;
+}

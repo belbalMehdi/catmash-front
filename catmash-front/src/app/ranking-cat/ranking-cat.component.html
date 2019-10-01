@@ -1,3 +1,16 @@
-<p>
-  ranking-cat works!
-</p>
+<div class="col s8 m6">
+    <div class="card horizontal">
+      <div class="rank" [ngClass]="{'top-3': rank<4, 'top-1': rank==1}">
+        {{rank}}
+      </div>
+      <div>
+        <img [src]="cat.url" [alt]="cat.id" class="circle">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p class="cat-name">{{cat.id}} </p>
+          <p class="cat-vote">{{cat.votes}} votes</p>
+        </div>
+      </div>
+    </div>
+  </div>
