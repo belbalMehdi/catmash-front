@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cat } from '../cat.service';
 
 @Component({
   selector: 'app-rate-cat',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rate-cat.component.css']
 })
 export class RateCatComponent implements OnInit {
-
+  @Input() cat: Cat;
+  choosed: boolean;
   constructor() { }
 
   ngOnInit() {
