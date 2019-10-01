@@ -1,0 +1,16 @@
+nav {
+    position: fixed;
+    bottom: 0px;
+}
+
+nav ul li{
+    min-width: 100px;
+}
+
+nav ul{
+    padding-left: 50px;
+}
+
+nav ul li.active {
+    background-color: rgba(0,0,0,0.6);
+}
