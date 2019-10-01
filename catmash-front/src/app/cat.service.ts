@@ -8,6 +8,10 @@ export interface Cat {
   votes: number;
 }
 
+const encounterURL = 'http://vps632408.ovh.net/encounter';
+const rateUrl = 'http://vps632408.ovh.net/rate';
+const rankingUrl = 'http://vps632408.ovh.net/ranking';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +20,11 @@ export class CatService {
   constructor(private http: HttpClient) { }
 
   getTwoCats(): Observable<Cat[]> {
-    return this.http.get<Cat[]>('http://vps632408.ovh.net/encounter');
+    return this.http.get<Cat[]>(encounterURL);
+  }
+
+  voteForCat(cat: Cat): Observable<Cat> {
+    return this.http.patch<Cat>(rateUrl, cat);
   }
 
 }
