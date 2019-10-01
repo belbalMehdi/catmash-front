@@ -1,3 +1,6 @@
-<p>
-  rate works!
-</p>
+<h2>Votez pour le plus mignon</h2>
+<div class="row">
+    <div class="col s3 offset-s2" *ngFor="let cat of cats">
+      <app-rate-cat [cat]="cat" (click)="chooseCat(cat)"></app-rate-cat>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatService, Cat } from '../cat.service';
 
 @Component({
   selector: 'app-rate',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rate.component.css']
 })
 export class RateComponent implements OnInit {
+  cats: Cat[];
+  constructor(private catService: CatService) { }
 
-  constructor() { }
+  getTwoCat() {
+    this.catService.getTwoCats().subscribe((cats) => {
+      this.cats = cats;
+    });
+  }
+
+  chooseCat(cat: Cat) {
+    this.getTwoCat();
+  }
 
   ngOnInit() {
+    this.getTwoCat();
   }
 
 }
