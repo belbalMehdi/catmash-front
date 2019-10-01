@@ -17,7 +17,9 @@ export class RateComponent implements OnInit {
   }
 
   chooseCat(cat: Cat) {
-    this.getTwoCat();
+    this.catService.voteForCat(cat).subscribe(ratedCate => {
+      this.getTwoCat();
+    });
   }
 
   ngOnInit() {

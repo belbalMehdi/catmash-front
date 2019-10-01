@@ -1,4 +1,7 @@
-<h2>Votez pour le plus mignon</h2>
+<h2>
+  Votez pour le chat le plus mignon 
+  <img src="https://previews.123rf.com/images/popocorn/popocorn1209/popocorn120900018/15499823-deux-chats-noirs-dans-l-amour.jpg">
+</h2>
 <div class="row">
     <div class="col s3 offset-s2" *ngFor="let cat of cats">
       <app-rate-cat [cat]="cat" (click)="chooseCat(cat)"></app-rate-cat>
