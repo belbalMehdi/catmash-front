@@ -9,6 +9,8 @@ import { RankingComponent } from './ranking/ranking.component';
 import { RankingCatComponent } from './ranking-cat/ranking-cat.component';
 import { RateCatComponent } from './rate-cat/rate-cat.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CatService } from './cat.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
